@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090811">
+<meta name="description" content="Menna — Cloud Security & Technology Portfolio">
+<title>Menna — Cloud Security & Technology</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#090811;--panel:#100e1b;--text:#f4f1f8;--muted:#a6a0b3;--purple:#a855f7;--purple2:#6d28d9;--line:rgba(255,255,255,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 50% 38%,rgba(89,35,151,.15),transparent 36%),radial-gradient(ellipse at 80% 80%,rgba(85,31,145,.08),transparent 35%)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.055);padding:0 max(24px,calc((100vw - 1120px)/2));position:sticky;top:0;background:rgba(9,8,17,.82);backdrop-filter:blur(18px);z-index:20}
+.brand{font-size:14px;font-weight:800;letter-spacing:1.8px;display:flex;align-items:center;gap:9px}.brand-symbol{width:23px;height:23px;border:2px solid #c7c3d1;border-right-color:transparent;border-radius:50%;display:inline-block;position:relative}.brand-symbol:after{content:"";position:absolute;width:2px;height:13px;background:#c7c3d1;left:9px;top:3px}
+nav{display:flex;align-items:center;gap:31px}nav a{font-size:11px;color:#c4bfcb;transition:.2s}nav a:hover{color:#fff}.nav-right{display:flex;align-items:center;gap:25px}.nav-button{background:#f5f3f8;color:#15111c;padding:11px 19px;border-radius:30px;font-size:10px;font-weight:800}.menu{display:none;background:none;border:0;color:white;font-size:24px}
+.hero{min-height:720px;text-align:center;position:relative;padding:58px 0 0;overflow:hidden}
+.eyebrow{display:inline-flex;align-items:center;border:1px solid rgba(168,85,247,.65);border-radius:30px;padding:6px 13px;color:#c9a4ff;font-size:9px;letter-spacing:.25px}
+h1{font-size:clamp(40px,5.1vw,64px);line-height:1.08;letter-spacing:-3.2px;font-weight:700;margin:23px auto 18px;max-width:800px}.hero h1 span{background:linear-gradient(100deg,#f8f7fa 15%,#b8aebf 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{font-size:13px;line-height:1.75;color:#c2bdc9;max-width:490px;margin:0 auto}
+.hero-art{height:420px;position:relative;margin:7px auto 0;max-width:900px;isolation:isolate}
+.dotfield{position:absolute;inset:5px 5% 0;background-image:radial-gradient(circle,rgba(130,66,215,.33) 1.1px,transparent 1.8px);background-size:15px 15px;mask-image:radial-gradient(ellipse at 50% 52%,black 5%,transparent 72%);opacity:.55}
+.shield-glow{position:absolute;width:330px;height:330px;left:50%;top:35px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(130,45,255,.3),rgba(89,34,145,.12) 44%,transparent 70%);filter:blur(15px)}
+.shield{position:absolute;left:50%;top:42px;transform:translateX(-50%);width:250px;height:275px;filter:drop-shadow(0 14px 13px rgba(0,0,0,.7)) drop-shadow(0 0 25px rgba(149,65,255,.35));animation:float 6s ease-in-out infinite}
+.shield svg{width:100%;height:100%;overflow:visible}
+.keyhole{position:absolute;left:50%;top:137px;transform:translateX(-50%);width:38px;height:75px}
+.keyhole:before{content:"";position:absolute;left:7px;top:0;width:25px;height:25px;border-radius:50%;background:#08070d;box-shadow:0 0 0 5px rgba(8,7,13,.12)}
+.keyhole:after{content:"";position:absolute;left:11px;top:20px;width:18px;height:45px;background:#08070d;clip-path:polygon(25% 0,75% 0,100% 100%,0 100%)}
+.spark{position:absolute;width:5px;height:5px;background:#9b36ff;border-radius:50%;box-shadow:0 0 13px 3px #7624dc;animation:blink 2.8s infinite}.s1{left:25%;top:190px}.s2{right:27%;top:112px;animation-delay:.8s}.s3{right:30%;top:205px;animation-delay:1.5s}.s4{left:31%;top:265px;animation-delay:.4s}
+.horizon{position:absolute;left:50%;bottom:-175px;transform:translateX(-50%);width:950px;height:330px;border-radius:50%;border-top:4px solid #bd67ff;box-shadow:0 -3px 13px #a22dff,0 -13px 35px rgba(164,55,255,.75),0 -35px 70px rgba(117,43,210,.3);background:radial-gradient(ellipse at 50% 0,rgba(137,40,210,.16),transparent 58%)}
+.hero-bottom{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font:8px 'DM Mono',monospace;letter-spacing:2px;color:#71697f;white-space:nowrap}
+.section{padding:105px 0;border-top:1px solid var(--line)}.kicker{font:9px 'DM Mono',monospace;color:#b68af1;letter-spacing:1.8px;margin-bottom:16px}.section-title{font-size:clamp(32px,4vw,48px);letter-spacing:-2px;line-height:1.12;margin:0 0 16px}.section-intro{color:var(--muted);font-size:13px;line-height:1.85;max-width:560px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.about-card{padding:27px;background:linear-gradient(145deg,rgba(112,54,166,.16),rgba(20,16,30,.6));border:1px solid rgba(174,121,232,.2);border-radius:15px}.about-card p{font-size:12px;line-height:1.9;color:#b8b0c2;margin:0}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.mini-stats div{border-top:1px solid rgba(255,255,255,.13);padding-top:13px}.mini-stats b{display:block;font-size:20px;color:#d5b4ff}.mini-stats span{font-size:9px;color:#93899f}
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:35px}.skill{min-height:185px;padding:23px;border:1px solid rgba(255,255,255,.09);border-radius:13px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.012));transition:.25s}.skill:hover,.project:hover{border-color:rgba(180,112,255,.5);transform:translateY(-4px)}.skill-icon{font-size:20px;color:#c18aff}.skill h3{font-size:16px;margin:18px 0 8px}.skill p{font-size:11px;line-height:1.7;color:#9e96aa;margin:0 0 14px}.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{font:8px 'DM Mono',monospace;color:#c7b6dc;border:1px solid rgba(184,139,228,.18);background:rgba(141,83,194,.08);padding:6px 8px;border-radius:20px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:34px}.project{border:1px solid rgba(255,255,255,.09);background:#100e19;border-radius:14px;overflow:hidden;transition:.25s}.project-art{height:190px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,rgba(116,52,174,.4),#100e19 70%)}
+.project-art:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(172,112,239,.25) 1px,transparent 1.5px);background-size:14px 14px;mask-image:radial-gradient(ellipse,black,transparent 70%);opacity:.45}
+.art-icon{font-size:45px;color:#d1aaff;position:relative;text-shadow:0 0 30px #9b45e9}.art-label{position:absolute;top:15px;left:17px;font:8px 'DM Mono';letter-spacing:1.5px;color:#b99acb}.project-body{padding:22px}.project-body h3{font-size:17px;margin:0 0 9px}.project-body p{font-size:11px;color:#a49bac;line-height:1.8;margin:0 0 15px}.project-meta{font:8px 'DM Mono';color:#b68af1;letter-spacing:1px}
+.training{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}.training-item{padding:18px 19px;border:1px solid rgba(255,255,255,.09);border-radius:10px;display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.018)}.training-no{font:10px 'DM Mono';color:#b68af1;padding-top:3px}.training-item b{display:block;font-size:12px;margin-bottom:5px}.training-item span{font-size:10px;color:#958b9e;line-height:1.6}
+.contact-box{border:1px solid rgba(174,121,232,.25);border-radius:17px;padding:42px;background:radial-gradient(ellipse at 85% 0,rgba(127,52,190,.2),transparent 50%),#100e19;display:flex;align-items:center;justify-content:space-between;gap:35px}.contact-box p{color:#a49bac;font-size:12px;line-height:1.8;max-width:460px}.contact-links{display:flex;flex-direction:column;gap:10px;min-width:190px}.contact-links a{font-size:11px;padding:12px 15px;border:1px solid rgba(255,255,255,.12);border-radius:30px;text-align:center;transition:.2s}.contact-links a:hover{background:#eee9f5;color:#100d16}
+footer{padding:25px 0 35px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#746d80;font-size:9px}.purple{color:#c99cff}
+@keyframes float{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,-9px)}}@keyframes blink{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+@media(max-width:760px){header{height:68px;padding:0 20px}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#100e19;padding:20px;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-right{display:none}.menu{display:block}.hero{min-height:670px;padding-top:62px}.hero-art{height:390px;margin-top:20px}.shield{width:220px;height:245px}.keyhole{top:126px;transform:translateX(-50%) scale(.88)}.horizon{width:720px;bottom:-165px}.about-grid{grid-template-columns:1fr;gap:28px}.skill-grid{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}.training{grid-template-columns:1fr}.contact-box{padding:28px;display:block}.contact-links{margin-top:25px}.section{padding:75px 0}}
+@media(max-width:480px){.wrap{width:calc(100% - 34px)}.hero h1{font-size:40px;letter-spacing:-2px}.hero-copy{font-size:11px;padding:0 12px}.hero-art{height:350px;margin-left:-20px;margin-right:-20px}.shield{top:50px;width:195px;height:220px}.keyhole{top:124px;transform:translateX(-50%) scale(.76)}.shield-glow{top:35px;width:280px;height:280px}.horizon{width:580px;height:250px;bottom:-135px}.skill-grid{grid-template-columns:1fr}.mini-stats{gap:7px}.mini-stats b{font-size:17px}.mini-stats span{font-size:8px}.section-title{font-size:34px}footer{gap:12px;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#home"><span class="brand-symbol"></span> Mennatalllah Elshimy<span class="purple">.</span></a>
+  <nav id="nav"><a href="#about">About</a><a href="#skills">Expertise</a><a href="#work">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
+  <div class="nav-right"><a href="#contact">Let's connect</a><a class="nav-button" href="#work">Explore work ↗</a></div>
+  <button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="eyebrow">Cloud Security &amp; Technology</div>
+  <h1><span>Building a safer</span><br><span>digital future.</span></h1>
+  <p class="hero-copy">Focused on cloud and network security, exploring secure infrastructure, access control, and network connectivity through hands-on technical labs.</p>
+  <div class="hero-art">
+    <div class="dotfield"></div><div class="shield-glow"></div>
+    <div class="spark s1"></div><div class="spark s2"></div><div class="spark s3"></div><div class="spark s4"></div>
+    <div class="shield">
+      <svg viewBox="0 0 260 290" aria-label="Purple security shield" role="img">
+        <defs>
+          <linearGradient id="shieldFill" x1="30" y1="10" x2="210" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#32145d"/><stop offset=".48" stop-color="#6827c7"/><stop offset=".78" stop-color="#a64dff"/><stop offset="1" stop-color="#f1d8ff"/></linearGradient>
+          <linearGradient id="edge" x1="30" y1="10" x2="220" y2="270"><stop stop-color="#8e43d9"/><stop offset=".7" stop-color="#c99aff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+        </defs>
+        <path d="M130 8 238 58 230 157Q219 235 130 280 41 235 30 157L22 58Z" fill="url(#shieldFill)" stroke="url(#edge)" stroke-width="2"/>
+        <path d="M130 25 220 67 213 154Q204 218 130 260 56 218 47 154L40 67Z" fill="none" stroke="#d5b0ff" stroke-opacity=".7" stroke-width="1.5"/>
+        <path d="M130 8 238 58 230 157Q219 235 130 280 41 235 30 157L22 58Z" fill="url(#shieldFill)" opacity=".12"/>
+      </svg>
+    </div>
+    <div class="keyhole"></div><div class="horizon"></div>
+  </div>
+  <div class="hero-bottom">IDENTITY&nbsp;&nbsp; · &nbsp;&nbsp;NETWORK&nbsp;&nbsp; · &nbsp;&nbsp;PROTECTION</div>
+</section>
+
+<section class="section" id="about"><div class="wrap about-grid">
+  <div><div class="kicker">01 / ABOUT ME</div><h2 class="section-title">Curious by nature.<br><span class="purple">Security-minded</span> by choice.</h2><p class="section-intro">I’m building my technical path around Cloud Security, while exploring the wider technology landscape through development, AI, networking, and communication.</p></div>
+  <div class="about-card"><p>My current focus is understanding how cloud environments are designed, connected, monitored, and secured. I enjoy hands-on learning and documenting what I build, while keeping room to grow across different technical disciplines.</p><div class="mini-stats"><div><b>01</b><span>Core focus<br>Cloud Security</span></div><div><b>02</b><span>Hands-on<br>Learning</span></div><div><b>03</b><span>Wide<br>Skillset</span></div></div></div>
+</div></section>
+
+<section class="section" id="skills"><div class="wrap">
+  <div class="kicker">02 / EXPERTISE</div><h2 class="section-title">A multi-disciplinary <span class="purple">toolkit.</span></h2><p class="section-intro">My core focus is Cloud Security and Network Security, supported by practical knowledge of AWS, networking, Linux, and technical communication.</p>
+  <div class="skill-grid">
+    <article class="skill"><div class="skill-icon">◈</div><h3>Cloud Security &amp; AWS</h3><p>Cloud foundations, identity, networking, monitoring, and security controls.</p><div class="chips"><span>AWS</span><span>IAM</span><span>VPC</span><span>EC2</span><span>CloudTrail</span><span>CloudWatch</span><span>WAF</span><span>KMS</span><span>CloudFront</span></div></article>
+    <article class="skill"><div class="skill-icon">⌁</div><h3>Networking &amp; Linux</h3><p>Network fundamentals, configuration concepts, and troubleshooting.</p><div class="chips"><span>CCNA</span><span>VLAN</span><span>DHCP</span><span>OSPF</span><span>ACL</span><span>NAT</span><span>Linux</span></div></article>
+    <article class="skill"><div class="skill-icon">⌘</div><h3>Programming &amp; Databases</h3><p>Programming foundations and working with relational and cloud databases.</p><div class="chips"><span>Python</span><span>C++</span><span>Java</span><span>PHP</span><span>JavaScript</span><span>SQL</span><span>MySQL</span><span>Firebase</span></div></article>
+    <article class="skill"><div class="skill-icon">✳</div><h3>AI &amp; Generative AI</h3><p>Building and exploring LLM-powered applications and retrieval workflows.</p><div class="chips"><span>LLMs</span><span>RAG</span><span>Embeddings</span><span>LangChain</span><span>Chroma</span></div></article>
+    <article class="skill"><div class="skill-icon">文</div><h3>Languages &amp; Translation</h3><p>Multilingual communication and Arabic–German translation.</p><div class="chips"><span>Arabic · Native</span><span>English · B1</span><span>German · A2</span></div></article>
+    <article class="skill"><div class="skill-icon">✎</div><h3>Freelance &amp; Creative</h3><p>Clear, organized communication and digital content preparation.</p><div class="chips"><span>Translation</span><span>PowerPoint</span><span>Presentations</span></div></article>
+  </div>
+</div></section>
+
+<section class="section" id="work"><div class="wrap">
+  <div class="kicker">03 / SELECTED WORK</div><h2 class="section-title">Network &amp; cloud <span class="purple">security labs.</span></h2><p class="section-intro">Hands-on labs focused on cloud infrastructure, secure network connectivity, identity and access management, and network configuration.</p>
+  <div class="projects">
+    <article class="project"><div class="project-art"><span class="art-label">AWS / VPC NETWORKING</span><div class="art-icon">⬡</div></div><div class="project-body"><div class="project-meta">CLOUD NETWORKING · AWS</div><h3>Multi-VPC Connectivity Lab</h3><p>Built and explored a multi-VPC environment with public and private subnets, VPC Peering, route tables, and connectivity testing. Practiced troubleshooting traffic flow between instances and reviewing network access boundaries.</p><div class="chips"><span>AWS VPC</span><span>Subnets</span><span>VPC Peering</span><span>Route Tables</span><span>Security Groups</span></div></div></article>
+    <article class="project"><div class="project-art"><span class="art-label">AWS / IDENTITY &amp; ACCESS</span><div class="art-icon">◈</div></div><div class="project-body"><div class="project-meta">CLOUD SECURITY · IAM</div><h3>AWS Identity &amp; Access Management</h3><p>Practiced managing IAM users and groups, permissions, MFA, and access-control concepts, with a focus on least privilege and understanding how IAM policies interact with organization-level controls.</p><div class="chips"><span>IAM</span><span>MFA</span><span>Policies</span><span>Least Privilege</span><span>SCP Concepts</span></div></div></article>
+    <article class="project"><div class="project-art"><span class="art-label">NETWORKING / CCNA</span><div class="art-icon">⌁</div></div><div class="project-body"><div class="project-meta">NETWORK SECURITY · CONFIGURATION</div><h3>Network Configuration &amp; Troubleshooting</h3><p>Practiced core networking tasks and concepts, including VLANs, DHCP, OSPF, ACLs, and NAT, alongside connectivity troubleshooting and traffic-control fundamentals.</p><div class="chips"><span>CCNA</span><span>VLAN</span><span>DHCP</span><span>OSPF</span><span>ACL</span><span>NAT</span></div></div></article>
+  </div>
+</div></section>
+
+<section class="section" id="journey"><div class="wrap">
+  <div class="kicker">04 / LEARNING JOURNEY</div><h2 class="section-title">Training &amp; <span class="purple">certifications.</span></h2><p class="section-intro">Programs and courses supporting my technical and professional growth.</p>
+  <div class="training">
+    <div class="training-item"><span class="training-no">01</span><div><b>Digital Egypt Pioneers — AWS Cloud Security</b><span>Cloud security learning path and practical AWS labs</span></div></div>
+    <div class="training-item"><span class="training-no">02</span><div><b>CCNA Networking Training</b><span>Networking fundamentals, configuration, and troubleshooting</span></div></div>
+    <div class="training-item"><span class="training-no">03</span><div><b>Harvard CS50</b><span>Introduction to Computer Science</span></div></div>
+    <div class="training-item"><span class="training-no">04</span><div><b>ALX AI Career Essentials</b><span>AI foundations and career development</span></div></div>
+    <div class="training-item"><span class="training-no">05</span><div><b>ITIDA GIGs &amp; eYouth</b><span>Freelancing and professional skills</span></div></div>
+    <div class="training-item"><span class="training-no">06</span><div><b>German Language — A2</b><span>DKW Akademie</span></div></div>
+    <div class="training-item"><span class="training-no">07</span><div><b>GDG Cybersecurity Training</b><span>Cybersecurity learning and technical development</span></div></div>
+  </div>
+</div></section>
+
+<section class="section" id="contact"><div class="wrap"><div class="contact-box"><div><div class="kicker">05 / GET IN TOUCH</div><h2 class="section-title">Let's build something<br><span class="purple">meaningful.</span></h2><p>Interested in connecting, collaborating, or discussing an opportunity? I’d be happy to hear from you.</p></div><div class="contact-links"><a href="mailto:menna.wa2l.90.com">Email ↗</a><a href="https://www.linkedin.com/in/mennaـelshimy?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/mennatallahwael" target="_blank" rel="noreferrer">GitHub ↗ <a href="https://wa.me/01124377188" target="_blank" rel="noreferrer"> WhatsApp ↗</a><a href="f:\CV\Mennatallah Wael Elshimy.pdf" download>Download CV ↓</a></a></div></div></div></section>
+</main>
+<footer class="wrap"><span>MENNATALLAH ELSHIMY<span class="purple">.</span> — CLOUD SECURITY &amp; TECHNOLOGY</span><span>© <span id="year"></span> · Built with curiosity</span></footer>
+<script>
+const menu=document.querySelector('.menu'),nav=document.querySelector('nav');
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
